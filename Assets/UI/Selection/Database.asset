@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcdba893196272f4b96cdbd96a635184, type: 3}
+  m_Name: Database
+  m_EditorClassIdentifier: 
+  options:
+  - LearningMaterialName: Sistem pencernaan
+    LearningMaterialShortDesc: 'Sistem pencernaan itu seperti pabrik pengolahan makanan
+      dalam tubuh kita. Makanan yang kita makan bakalan dipecah jadi bagian-bagian
+      kecil yang bisa diserap tubuh untuk dijadiin energi dan nutrisi. Prosesnya
+      dimulai dari mulut, terus makanan bergerak ke kerongkongan, lambung, usus halus,
+      usus besar, rektum, dan akhirnya keluar jadi feses.  '
+    LearningMaterialCover: {fileID: 21300000, guid: 189b831728c8be14c9be8a8acb99d6b9, type: 3}
+    enableStartButton: 1
+    teleportToScene: 2
+  - LearningMaterialName: Tulang
+    LearningMaterialShortDesc: "Ini tuh, bagian tubuh yang nggak bisa diliat sama
+      kita. Tapi, fungsinya tuh penting banget. Tanpa tulang ini tubuh kita tidak
+      akan bisa bergerak, karena di tulang ini itu tempat merekatnya otot-otot kita.
+      Yuk, klik mulai buat tahu lebih lanjut tentang tulang-tulang\_di\_tubuh\_kita."
+    LearningMaterialCover: {fileID: 21300000, guid: 39ed0e998199b104c8947f9133fc3197, type: 3}
+    enableStartButton: 1
+    teleportToScene: 3
+  - LearningMaterialName: Tidak Tersedia
+    LearningMaterialShortDesc: 
+    LearningMaterialCover: {fileID: 0}
+    enableStartButton: 0
+    teleportToScene: 0
