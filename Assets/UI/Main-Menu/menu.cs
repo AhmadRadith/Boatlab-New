@@ -1,23 +1,24 @@
 using UnityEngine;
 using UnityEngine.Networking;
 using System.Collections;
+using TMPro;
 
 public class menu : MonoBehaviour
 {
     public GameObject iniobjectcredit;
     public GameObject iniobjectcontrol;
     public GameObject CPDanTP;
-    public void CreditEnabled(bool toggle)
+    public TMP_Text UpdateNetwork;
+    public void CreditEnabled()
     {
-        iniobjectcredit.SetActive(toggle);
+        iniobjectcredit.SetActive(!iniobjectcredit.activeSelf);
     }
-    public void ControlEnable(bool toggle)
+    public void ControlEnable()
     {
-        iniobjectcontrol.SetActive(toggle);
+        iniobjectcontrol.SetActive(!iniobjectcontrol.activeSelf);
     }
     public void CPTPEnable()
     {
-        print(CPDanTP);
         CPDanTP.SetActive(!CPDanTP.activeSelf);
         //CPDanTP.SetActive(toggle);
     }
@@ -33,7 +34,7 @@ public class menu : MonoBehaviour
     // Start is called before the first frame update-o]
     void Start()
     {
-
+        StartCoroutine(getRequest("https://raw.githubusercontent.com/AhmadRadith/Boatlab-New/master/Assets/versions"));
     }
 
     // Update is called once per frame
