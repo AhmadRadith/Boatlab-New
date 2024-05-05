@@ -11,9 +11,9 @@ public class OutlineSelection : MonoBehaviour
     public GameObject humanBody;
     public GameObject bodyOrgan;
     public TMP_Text TextDesc;
-    public GameObject BodyOrganDescriptionPlace;
+    public GameObject BodyOrganDescriptionText;
     public GameObject BodyOrganDescriptionBox;
-    public GameObject DetectionBodyOrganDescriptionBox;
+    //public GameObject DetectionBodyOrganDescriptionBox;
     public string EmptyString;
     public bool Useblack;
     private bool enableUIdesc;
@@ -37,7 +37,7 @@ public class OutlineSelection : MonoBehaviour
             Vector3 A = Input.mousePosition;
             A.x += 120;
             A.y -= 65;
-            TextDesc.transform.position = A;
+            TextDesc.transform.position = A ;
             return;
         }
             TextDesc.enabled = false;
@@ -59,7 +59,7 @@ public class OutlineSelection : MonoBehaviour
             }
         }
         if (!EventSystem.current.IsPointerOverGameObject()
-            && Physics.Raycast(ray, out raycastHit)) //Make sure you have EventSystem in the hierarchy before using EventSystem
+            && Physics.Raycast(ray, out raycastHit))
         {
             highlight = raycastHit.transform;
             if (highlight.CompareTag("Selectable") && highlight != selection)
@@ -93,13 +93,13 @@ public class OutlineSelection : MonoBehaviour
 
         }
 
-        if (Input.GetMouseButtonDown(0) )
+        if (Input.GetMouseButtonDown(0))
         {
             if (highlight)
             {
                 if (Vector3.Distance(cursorPosition, highlight.gameObject.transform.position) < maxdistance)
                 {
-                    if(KeptGO != null)
+                    if(KeptGO)
                     {
                         KeptGO.GetComponent<Outline>().enabled = false;
                         KeptGO = null;
@@ -115,23 +115,22 @@ public class OutlineSelection : MonoBehaviour
                         desc = EmptyString == "" ?  "Organ yang ini itu bukan organ utama, soalnya organ ini nggak dilalui makanan. Tapiii organ ini itu membantu dalam proses pencernaan makanan, dengan cara ngirimin enzim yang berguna dalam pencernaan makanan.\r\n" : EmptyString;
                     }
                     BodyOrganDescriptionBox.SetActive(true);
-                    TMP_Text thetext = BodyOrganDescriptionPlace.GetComponentInChildren<TMP_Text>();
+                    TMP_Text thetext = BodyOrganDescriptionText.GetComponentInChildren<TMP_Text>();
                     thetext.text = desc;
                     KeptGO = highlight.gameObject;
                 }
             }
             else
             {
-                if(!KeptGO)
+                if(KeptGO)
                 {
-                    if(KeptGO)
-                    {
                         KeptGO.GetComponent<Outline>().enabled = false;
                         KeptGO = null;
-                    }
                 }
-
-                BodyOrganDescriptionBox.SetActive(false);
+                if(!EventSystem.current.IsPointerOverGameObject())
+                {
+                    BodyOrganDescriptionBox.SetActive(false);
+                }
             }
         }
     }

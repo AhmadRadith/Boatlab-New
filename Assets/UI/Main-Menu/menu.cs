@@ -105,7 +105,7 @@ public class menu : MonoBehaviour
         float currentTime = 0f;
         while (UpdateNetwork.color.a < 1f)
         {
-            float alpha = Mathf.Lerp(0f, 1f, currentTime / 2f); // Corrected lerp
+            float alpha = Mathf.Lerp(0f, 1f, currentTime / 2f);
             UpdateNetwork.color = new Color(UpdateNetwork.color.r, UpdateNetwork.color.g, UpdateNetwork.color.b, alpha);
             currentTime += Time.deltaTime;
             yield return null;
