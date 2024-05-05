@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Database
   m_EditorClassIdentifier: 
   options:
-  - LearningMaterialName: Sistem pencernaan
+  - LearningMaterialName: Sistem Pencernaan
     LearningMaterialShortDesc: 'Sistem pencernaan itu seperti pabrik pengolahan makanan
       dalam tubuh kita. Makanan yang kita makan bakalan dipecah jadi bagian-bagian
       kecil yang bisa diserap tubuh untuk dijadiin energi dan nutrisi. Prosesnya

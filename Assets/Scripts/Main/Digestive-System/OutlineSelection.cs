@@ -12,6 +12,8 @@ public class OutlineSelection : MonoBehaviour
     public GameObject bodyOrgan;
     public TMP_Text TextDesc;
     public GameObject BodyOrganDescriptionPlace;
+    public GameObject BodyOrganDescriptionBox;
+    public GameObject DetectionBodyOrganDescriptionBox;
     public string EmptyString;
     public bool Useblack;
     private bool enableUIdesc;
@@ -33,8 +35,8 @@ public class OutlineSelection : MonoBehaviour
             TextDesc.enabled = true;
             TextDesc.text = UIdesc;
             Vector3 A = Input.mousePosition;
-            A.x += 100;
-            A.y -= 50;
+            A.x += 120;
+            A.y -= 65;
             TextDesc.transform.position = A;
             return;
         }
@@ -44,7 +46,6 @@ public class OutlineSelection : MonoBehaviour
     {
 
         Vector3 cursorPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector3 gameObjectPosition = gameObject.transform.position;
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
         if (highlight)
@@ -92,7 +93,7 @@ public class OutlineSelection : MonoBehaviour
 
         }
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) )
         {
             if (highlight)
             {
@@ -113,7 +114,7 @@ public class OutlineSelection : MonoBehaviour
                     {
                         desc = EmptyString == "" ?  "Organ yang ini itu bukan organ utama, soalnya organ ini nggak dilalui makanan. Tapiii organ ini itu membantu dalam proses pencernaan makanan, dengan cara ngirimin enzim yang berguna dalam pencernaan makanan.\r\n" : EmptyString;
                     }
-                    BodyOrganDescriptionPlace.SetActive(true);
+                    BodyOrganDescriptionBox.SetActive(true);
                     TMP_Text thetext = BodyOrganDescriptionPlace.GetComponentInChildren<TMP_Text>();
                     thetext.text = desc;
                     KeptGO = highlight.gameObject;
@@ -123,11 +124,14 @@ public class OutlineSelection : MonoBehaviour
             {
                 if(!KeptGO)
                 {
-                    KeptGO.GetComponent<Outline>().enabled = false;
-                    KeptGO = null;
+                    if(KeptGO)
+                    {
+                        KeptGO.GetComponent<Outline>().enabled = false;
+                        KeptGO = null;
+                    }
                 }
-             
-                BodyOrganDescriptionPlace.SetActive(false);
+
+                BodyOrganDescriptionBox.SetActive(false);
             }
         }
     }
