@@ -15,4 +15,9 @@ public class OptionsDatabase : ScriptableObject
     {
         return options[index];
     }
+
+    public Character[] GetAllOptions()
+    {
+        return options;
+    }
 }

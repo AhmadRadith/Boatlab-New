@@ -1,0 +1,97 @@
+[
+  {
+    "question": "Apa nama dari gerakan mendorong ke bawah pada esofagus?",
+    "type": "multiple_choice",
+    "options": ["Peristaltik", "Kinetik", "Mekanik", "Kondensasi"],
+    "answer": "Peristaltik"
+  },
+  {
+    "question": "Apa akibat dari gerakan yang ada pada esofagus?",
+    "type": "multiple_choice",
+    "options": [
+      "Tidak terjadi apa-apa",
+      "Makanan menjadi berbentuk bola-bola yang disebut bolus",
+      "Makanan dihancurkan lagi",
+      "Makanan terhambat untuk ke lambung"
+    ],
+    "answer": "Makanan menjadi berbentuk bola-bola yang disebut bolus"
+  },
+  {
+    "question": "Apa enzim yang memecah karbohidrat dalam sistem pencernaan?",
+    "type": "multiple_choice",
+    "options": [
+      "Lipase",
+      "Amilase",
+      "Pepsin",
+      "Neurotoksin"
+    ],
+    "answer": "Amilase"
+  },
+  {
+    "question": "Apa saja enzim yang digunakan untuk mencerna makanan di lambung?",
+    "type": "multiple_choice",
+    "options": [
+      "HCL dan Amilase",
+      "Pepsin dan Laktase",
+      "Protease dan Sukrase",
+      "HCL dan Pepsin"
+    ],
+    "answer": "HCL dan Pepsin"
+  },
+  {
+    "question": "Apa nama bakteri pembusukan yang ada di usus besar?",
+    "type": "multiple_choice",
+    "options": [
+      "Rhizopus oryzae",
+      "Escerichia coli",
+      "Lactobacillus Casei",
+      "Lactobacillus Bulgaricus"
+    ],
+    "answer": "Escerichia coli"
+  },
+  {
+    "question": "Dimanakah makanan berubah menjadi feses?",
+    "type": "multiple_choice",
+    "options": [
+      "Mulut",
+      "Anus",
+      "Usus Besar",
+      "Rektum"
+    ],
+    "answer": "Usus Besar"
+  },
+  {
+    "question": "Apa nama otot yang ada di rektum?",
+    "type": "multiple_choice",
+    "options": [
+      "Otot Sfingter",
+      "Otot Jantung",
+      "Otot Lurik",
+      "Otot Polos"
+    ],
+    "answer": "Otot Sfingter"
+  },
+  {
+    "question": "Mengapa walaupun makanan yang ditelan bertekstur lembut, namun feses yang keluar bertekstur padat?",
+    "type": "multiple_choice",
+    "options": [
+      "Karena cairan pada makanan yang kita makan menguap saat bertemu asam lambung",
+      "Karena kandungan air pada makanan diserap saat proses pencernaan di usus besar",
+      "Karena kandungan air pada makanan terpisah dari makanan yang padat saat proses pencernaan di usus halus",
+      "Karena tubuh kita menyerap kandungan air pada makanan yang kita telan di setiap bagian organ pencernaan"
+    ],
+    "answer": "Karena kandungan air pada makanan diserap saat proses pencernaan di usus besar"
+  },
+  {
+    "question": "Enzim pada no 3 memecah karbohidrat menjadi…..",
+    "type": "multiple_choice",
+    "options": ["Asam", "Lemak", "Gula", "Protein"],
+    "answer": "Gula"
+  },
+  {
+    "question": "Ada berapa organ berbentuk tabung panjang yang ada pada sistem pencernaan?",
+    "type": "multiple_choice",
+    "options": ["1", "2", "3", "4"],
+    "answer": "4"
+  }
+]

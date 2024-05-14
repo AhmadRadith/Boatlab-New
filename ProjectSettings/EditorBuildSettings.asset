@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 97f520bb5e526604298a58543482c513
   - enabled: 1
+    path: Assets/Scenes/Quiz.unity
+    guid: 5033813f648d50844a4d52c0905fe1df
+  - enabled: 1
     path: Assets/Scenes/Selection.unity
     guid: ceb172d30b7e17e48adc6d26e7e1efc9
   - enabled: 1

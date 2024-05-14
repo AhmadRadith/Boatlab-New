@@ -25,7 +25,6 @@ public class menu : MonoBehaviour
     public void CPTPEnable()
     {
         CPDanTP.SetActive(!CPDanTP.activeSelf);
-        //CPDanTP.SetActive(toggle);
     }
     public void Exit()
     {
@@ -36,14 +35,12 @@ public class menu : MonoBehaviour
         Application.Quit();
 #endif
     }
-    // Start is called before the first frame update-o]
     void Start()
     {
         StartCoroutine(getRequest("https://raw.githubusercontent.com/AhmadRadith/Boatlab-New/master/Assets/StreamingAssets/versions"));
         VersionShow.text = "Versi:\n" + File.ReadAllText((Application.streamingAssetsPath + "/versions"));
     }
 
-    // Update is called once per frame
     void Update()
     {
 
@@ -62,7 +59,6 @@ public class menu : MonoBehaviour
         {
             if(uwr.downloadHandler.text != File.ReadAllText((Application.streamingAssetsPath + "/versions")))
             {
-                print(UpdateNetwork.transform.position);
                 UpdateNetwork.transform.localPosition = new Vector3(482.3f, -197.7f, 0f);
                 //UpdateNetwork.color = Color.blue;
                 //Vector3 p = new Vector3(482.3f, -197.7f, 0f);
@@ -71,6 +67,7 @@ public class menu : MonoBehaviour
             }
             else
             {
+                //UpdateNetwork.text = $"Screen Width:{Screen.width}\nScreen height: {Screen.height}";
                 UpdateNetwork.text = "";
             }
         }

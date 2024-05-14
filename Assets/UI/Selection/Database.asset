@@ -21,7 +21,9 @@ MonoBehaviour:
       usus besar, rektum, dan akhirnya keluar jadi feses.  '
     LearningMaterialCover: {fileID: 21300000, guid: 189b831728c8be14c9be8a8acb99d6b9, type: 3}
     enableStartButton: 1
-    teleportToScene: 2
+    enableQuizButton: 1
+    QuizOption: 1
+    teleportToScene: 3
   - LearningMaterialName: Tulang
     LearningMaterialShortDesc: "Ini tuh, bagian tubuh yang nggak bisa diliat sama
       kita. Tapi, fungsinya tuh penting banget. Tanpa tulang ini tubuh kita tidak
@@ -29,9 +31,13 @@ MonoBehaviour:
       Yuk, klik mulai buat tahu lebih lanjut tentang tulang-tulang\_di\_tubuh\_kita."
     LearningMaterialCover: {fileID: 21300000, guid: 39ed0e998199b104c8947f9133fc3197, type: 3}
     enableStartButton: 1
-    teleportToScene: 3
+    enableQuizButton: 0
+    QuizOption: 0
+    teleportToScene: 4
   - LearningMaterialName: Tidak Tersedia
     LearningMaterialShortDesc: 
     LearningMaterialCover: {fileID: 0}
     enableStartButton: 0
+    enableQuizButton: 0
+    QuizOption: 0
     teleportToScene: 0

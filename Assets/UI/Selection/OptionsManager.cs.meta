@@ -3,7 +3,14 @@ guid: a21926e70bae8b6489e14ff73bb2b1ec
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - optionsDB: {fileID: 11400000, guid: 92f39034f02c6cf41962faf25347d236, type: 2}
+  - nameText: {instanceID: 0}
+  - descText: {instanceID: 0}
+  - artworkSpritePlace: {instanceID: 0}
+  - IconImage: {instanceID: 0}
+  - LockImage: {instanceID: 0}
+  - StartButton: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

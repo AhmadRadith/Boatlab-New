@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
 using TMPro;
 using UnityEngine;
@@ -23,6 +24,7 @@ public class OutlineSelection : MonoBehaviour
     private RaycastHit raycastHit;
     private GameObject KeptGO;
     readonly float maxdistance = 34;
+    //private Dictionary<string, string> ExplanationsDictionary;
     public void ToggleBody()
     {
       bodyOrgan.SetActive(humanBody.activeSelf);          
@@ -106,6 +108,7 @@ public class OutlineSelection : MonoBehaviour
 
                     }
                     string desc;
+                    
                     try
                     {
                         desc = File.ReadAllText((Application.streamingAssetsPath + $"/Explanations/{SceneManager.GetActiveScene().name.ToLower()}/{highlight.gameObject.name.ToLower()}.txt"));

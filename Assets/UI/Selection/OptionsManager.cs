@@ -7,14 +7,16 @@ public class OptionsManager : MonoBehaviour
     public TMP_Text nameText;
     public TMP_Text descText;
     public Image artworkSpritePlace;
-    public Image IconImage;
+    //public Image IconImage;
     public Image LockImage;
     public Button StartButton;
+    public Button QuizButton;
     private int selectorOption = 0;
 
     private void Start()
     {
         UpdateCharacter(selectorOption);
+        print(QuizManager.SelectedOption);
     }
     public void NextOption()
     {
@@ -35,10 +37,11 @@ public class OptionsManager : MonoBehaviour
         UpdateCharacter(selectorOption);
 
     }
-    private void UpdateCharacter(int selectedOption)
+    public void UpdateCharacter(int selectedOption)
     {
         Character character = optionsDB.GetOption(selectedOption);
-        Button button = StartButton.GetComponent<Button>();
+        Button startbutton = StartButton.GetComponent<Button>();
+        Button quizbutton = QuizButton.GetComponent<Button>();
 
         if (character.LearningMaterialCover != null)
         {
@@ -62,8 +65,11 @@ public class OptionsManager : MonoBehaviour
             descText.text = "Eh fitur ini sedang dalam pembuatan, tunggu di next update ya!";
         }
 
-        button.interactable = character.enableStartButton;
-        LockImage.enabled = !character.enableStartButton;
+        QuizManager.SelectedOption = character.QuizOption;
+        startbutton.interactable = character.enableStartButton;
+        quizbutton.interactable = character.enableQuizButton;
+        LockImage!.enabled = !character.enableStartButton;
         FadeInOut.levelToLoad = character.teleportToScene;
     }
+    
 }

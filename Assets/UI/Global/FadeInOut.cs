@@ -7,20 +7,23 @@ public class FadeInOut : MonoBehaviour
     public static int levelToLoad;
     void Start()
     {
-        levelToLoad = 2;
+        levelToLoad = 3;
+
+        //print(SceneManager.GetActiveScene().name);
         animator = GameObject.FindWithTag("FadeUI").GetComponent<Animator>();
     }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (SceneManager.GetActiveScene().buildIndex == 1)
+            print(SceneManager.GetActiveScene().buildIndex);
+            if (SceneManager.GetActiveScene().buildIndex == 2)
             {
                 FadeToLevel(0);
             }
-            else if (SceneManager.GetActiveScene().buildIndex > 1)
+            else if (SceneManager.GetActiveScene().buildIndex > 0)
             {
-                FadeToLevel(1);
+                FadeToLevel(2);
             }
         }
     }

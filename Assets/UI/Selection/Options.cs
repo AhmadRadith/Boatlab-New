@@ -7,6 +7,8 @@ public class Character
     public string LearningMaterialName;
     public string LearningMaterialShortDesc;
     public Sprite LearningMaterialCover;
-    public Boolean enableStartButton;
+    public bool enableStartButton;
+    public bool enableQuizButton;
+    public QuizManager.AvailableOptions QuizOption;
     public int teleportToScene;
 }
