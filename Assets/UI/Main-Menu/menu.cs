@@ -52,6 +52,7 @@ public class menu : MonoBehaviour
 
         if (uwr.result == UnityWebRequest.Result.ConnectionError)
         {
+            UpdateNetwork.transform.localPosition = new Vector3(412.4f, UpdateNetwork.transform.localPosition.y);
             UpdateNetwork.color = Color.red;
             UpdateNetwork.text = "Gagal mendapat versi terbaru";    
         }

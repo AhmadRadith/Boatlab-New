@@ -4517,7 +4517,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: <link="https://google.com">Mengambil versi terbaru</link>
+  m_text: Mengambil versi terbaru
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 418a60c7fb409c14cb3b7650e630f1e6, type: 2}
   m_sharedMaterial: {fileID: -4688797065756804075, guid: 418a60c7fb409c14cb3b7650e630f1e6, type: 2}
